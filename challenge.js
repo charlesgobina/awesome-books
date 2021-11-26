@@ -74,6 +74,9 @@ function bookAdd() {
   });
 }
 
+
+
+// eslint-disable-next-line no-use-before-define
 function removeBook() {
   const removeBtn = document.querySelectorAll('#remove-btn');
   removeBtn.forEach((remove) => {
