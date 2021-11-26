@@ -1,23 +1,23 @@
 class Library {
-  constructor(title, author, id, listBooks) {
+  constructor(title, author, id) {
     this.title = title;
     this.author = author;
     this.id = id;
-    this.listBooks = listBooks = [];
+    this.listBooks = [];
   }
 
   setStorage() {
-    if(localStorage.getItem('MyBooks') == null) {
+    if (localStorage.getItem('MyBooks') == null) {
       localStorage.setItem('MyBooks', JSON.stringify(this.listBooks));
     }
   }
 
   addBook() {
-    let book = {
+    const book = {
       title: this.title,
       author: this.author,
       id: this.id,
-    }
+    };
     this.setStorage();
     this.listBooks = JSON.parse(localStorage.getItem('MyBooks'));
     this.listBooks.push(book);
@@ -32,10 +32,10 @@ class Library {
   }
 }
 
-let library = new Library;
-let addBtn = document.querySelector('#add-btn');
-let bookTitle = document.querySelector('#title');
-let bookAuthor = document.querySelector('#author');
+const library = new Library();
+const addBtn = document.querySelector('#add-btn');
+const bookTitle = document.querySelector('#title');
+const bookAuthor = document.querySelector('#author');
 
 function displayBooks() {
   library.listBooks = JSON.parse(localStorage.getItem('MyBooks'));
@@ -47,7 +47,7 @@ function displayBooks() {
     `;
   } else {
     let bookDock = '';
-    for(let i = 0; i < library.listBooks.length; i += 1) {
+    for (let i = 0; i < library.listBooks.length; i += 1) {
       bookDock += `
       <ul class="book">
         <li>${library.listBooks[i].title}</li>
@@ -63,10 +63,10 @@ function displayBooks() {
 
 function bookAdd() {
   addBtn.addEventListener('click', () => {
-    let library = new Library;
+    const library = new Library();
     library.title = bookTitle.value;
     library.author = bookAuthor.value;
-    library.id = Math.random().toString(16).substr(4,7);
+    library.id = Math.random().toString(16).substr(4, 7);
     library.addBook();
     bookTitle.value = '';
     bookAuthor.value = '';
@@ -75,11 +75,10 @@ function bookAdd() {
 }
 
 function removeBook() {
-  let removeBtn = document.querySelectorAll('#remove-btn');
+  const removeBtn = document.querySelectorAll('#remove-btn');
   removeBtn.forEach((remove) => {
     remove.addEventListener('click', () => {
-      let ID = remove.dataset.id;
-      console.log(remove.dataset.id);
+      const ID = remove.dataset.id;
       library.removeBook(ID);
       displayBooks();
     });
@@ -90,4 +89,4 @@ window.onload = () => {
   library.setStorage();
   displayBooks();
   bookAdd();
-}
+};
