@@ -201,20 +201,16 @@ nav {
   line-height: 30px;
 }
 
-.footer-wrapper {
-  text-align: center;
+footer {
   position: absolute;
   bottom: 0;
   width: 50%;
   margin: 10px 20% 15px 20%;
-}
-
-footer {
   border: 1px solid #000;
   padding: 15px;
   border-width: 3px 3px 5px 5px;
   border-radius: 79% 47% 67% 75%/1% 1% 1% 1%;
-  transform: rotate(1deg);
+  transform: rotate(-1deg);
   justify-content: center;
   align-items: center;
   gap: 5px;
