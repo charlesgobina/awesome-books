@@ -105,8 +105,8 @@ activator.forEach((activi) => {
       showAdd.style.display = 'none';
       showContact.style.display = 'block';
     }
-  })
-})
+  });
+});
 
 window.onload = () => {
   library.setStorage();
