@@ -5,19 +5,60 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
   <title>Awesome Books</title>
 </head>
 <body>
+  <header>
+    <nav class="d-flex">
+      <div class="logo d-flex">
+        <i class='bx bxs-book bx-sm'></i>
+        <h1>Awesome Books</h1>
+      </div>
+      <ul class="nav-links d-flex">
+        <li><a class="togly" data-target="list" href="#">List</a></li>
+        <li><a class="togly" data-target="add" href="#">Add book</a></li>
+        <li><a class="togly" data-target="contact" href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
   <main>
-    <h1>Book Library</h1>
-    <div class="book-list" id="book-list">
-    </div>
-      <br>
-    <form>
-      <input type="text" placeholder="Title" id="title">
-      <input type="text" placeholder="Author" id="author">
-      <button type="button" id="add-btn">Add</button>
-    </form>
+    <section class="list-wrapper center" id="list">
+      <h2 class="section-heading">All awesome books</h2>
+      <div class="book-list" id="book-list">
+      </div>
+    </section>
+    <section class="form-wrapper center" id="add">
+      <fieldset>
+        <legend><h2 class="section-heading">Add a new book</h2></legend>
+        <form class="d-flex">
+          <input required type="text" placeholder="Title" id="title">
+          <input required type="text" placeholder="Author" id="author">
+          <button required type="button" id="add-btn">Add</button>
+        </form>
+      </fieldset>
+      <div class="submitted d-flex center">
+        <p>Book added successfully</p>
+        <i class='bx bx-check bx-sm'></i>
+      </div> 
+    </section>
+    <section class="contact-wrapper center" id="contact">
+      <h2 class="section-heading">Contact Information</h2>
+      <p>Do you have any question or just want to say "hello" ?</p>
+      <p>You can reach out to me</p>
+      <ul class="contact-info">
+        <li>Email: charles.gobina@gmail.com</li>
+        <li>Phone: 0043854210558</li>
+        <li>Address: Streetname 82 City, Country</li>
+      </ul>
+    </section>
+    <section class="footer-wrapper center">
+      <footer class="d-flex center">
+        <p class="footer-text">©copyright </p>
+        <p class="footer-text">2022</p>
+      </footer>
+    </section>
+    
   </main>
 
   <script src="challenge.js"></script>

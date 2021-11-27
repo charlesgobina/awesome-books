@@ -1,5 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Comic Neue', cursive;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.center {
+  text-align: center;
+}
+
+header,
+main {
+  padding: 0 5%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  position: relative;
+  min-height: 90vh;
+  padding-bottom: 100px;
+}
+
+button {
+  width: 80px;
+  box-shadow: 3px 5px 5px black;
+  border: 3px solid green;
+  border-width: 5px 3px 3px 5px;
+  border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+  transform: rotate(2deg);
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: green;
+  color: #fff;
+}
+
+.remove-btn {
+  background-color: red;
+  border: 3px solid red;
+}
+
+button:hover {
+  box-shadow: none;
+  transform: translateX(2px);
+}
+
+nav {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #000;
+  border-width: 3px 3px 5px 5px;
+  border-radius: 94% 97% 97% 95%/1% 1% 1% 1%;
+  transform: rotate(1deg);
+  margin: 10px 20% 0 20%;
+}
+
+.bx {
+  color: red;
+}
+
+.logo {
+  align-items: center;
+}
+
+.nav-links {
+  width: 200px;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-links li a {
+  color: rgb(0, 0, 0);
+  transition: all 0.5s;
+  font-weight: 600;
+}
+
+.nav-links li a:hover {
+  color: orange;
+}
+
+.nav-links li a:focus {
+  color: orange;
+}
+
+.list-wrapper {
+  margin: 10px 20% 0 20%;
+}
+
+.book-list {
+  border: 5px solid #000;
+  border-width: 3px 3px 5px 5px;
+  border-radius: 79% 47% 67% 75%/1% 1% 1% 1%;
+  transform: rotate(-1deg);
+  overflow: hidden;
+}
+
+.book {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.empty {
+  padding: 20px 40px;
+}
+
+.empty p {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.book:nth-child(odd) {
+  background-color: #ddd;
+}
+
+.book li {
+  padding: 20px 0;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  text-shadow: 10px 10px 10px rgba(122, 122, 122, 0.8);
+}
+
+.section-heading {
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+.form-wrapper fieldset {
+  border-top: 1px solid #000;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-width: 5px 3px 3px 5px;
+  border-radius: 3% 4% 3% 5%/4% 9% 3% 5%;
+  transform: rotate(1deg);
+  margin: 10px 20% 0 20%;
+  padding-bottom: 5px;
+}
+
+.bx-check {
+  color: green;
+}
+
+.submitted {
+  display: none;
+}
+
+.submitted.active {
+  display: flex;
+  margin-left: 35%;
+  transition: all 0.5s;
+}
+
+.form-wrapper form {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-wrapper form input {
+  height: 40px;
+  font-size: 18px;
+  padding: 0 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 50%;
+  border: 1px solid #000;
+  border-width: 5px 3px 3px 5px;
+  border-radius: 3% 4% 3% 5%/4% 9% 3% 5%;
+  transform: rotate(-1deg);
+}
+
+.form-wrapper form input::placeholder {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.contact-wrapper {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.footer-wrapper {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  margin: 10px 20% 15px 20%;
+}
+
+footer {
+  border: 1px solid #000;
+  padding: 15px;
+  border-width: 3px 3px 5px 5px;
+  border-radius: 79% 47% 67% 75%/1% 1% 1% 1%;
+  transform: rotate(1deg);
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-text {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 22px;
+  color: #000;
+  font-weight: bold;
 }
