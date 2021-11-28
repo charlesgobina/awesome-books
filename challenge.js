@@ -88,6 +88,9 @@ function removeBook() {
 const showList = document.getElementById('list');
 const showAdd = document.getElementById('add');
 const showContact = document.getElementById('contact');
+let DateTime = luxon.DateTime.now();
+const myDate = document.querySelector('#date');
+myDate.innerHTML = DateTime.toLocaleString(luxon.DateTime.DATETIME_MED);
 
 const activator = document.querySelectorAll('.togly');
 activator.forEach((activi) => {
