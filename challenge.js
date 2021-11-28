@@ -41,18 +41,17 @@ function displayBooks() {
   library.listBooks = JSON.parse(localStorage.getItem('MyBooks'));
   if (library.listBooks.length === 0) {
     document.querySelector('.book-list').innerHTML = `
-      <div class="book">
-        <p>The Library is Empty.</p>
+      <div class="book empty">
+        <p>The Library is Empty. . . . . </p>
       </div>
     `;
   } else {
     let bookDock = '';
     for (let i = 0; i < library.listBooks.length; i += 1) {
       bookDock += `
-      <ul class="book">
-        <li>${library.listBooks[i].title}</li>
-        <li>${library.listBooks[i].author}</li>
-        <button id="remove-btn" data-id="${library.listBooks[i].id}" type="button">Remove</button>
+      <ul class="book d-flex">
+        <li>"${library.listBooks[i].title}" by ${library.listBooks[i].author}</li>
+        <button id="remove-btn" class="remove-btn" data-id="${library.listBooks[i].id}" type="button">Remove</button>
       </ul>
       `;
     }
@@ -86,8 +85,34 @@ function removeBook() {
   });
 }
 
+const showList = document.getElementById('list');
+const showAdd = document.getElementById('add');
+const showContact = document.getElementById('contact');
+
+const activator = document.querySelectorAll('.togly');
+activator.forEach((activi) => {
+  activi.addEventListener('click', () => {
+    if (activi.dataset.target === 'list') {
+      showList.style.display = 'block';
+      showAdd.style.display = 'none';
+      showContact.style.display = 'none';
+    } else if (activi.dataset.target === 'add') {
+      showList.style.display = 'none';
+      showAdd.style.display = 'block';
+      showContact.style.display = 'none';
+    } else {
+      showList.style.display = 'none';
+      showAdd.style.display = 'none';
+      showContact.style.display = 'block';
+    }
+  });
+});
+
 window.onload = () => {
   library.setStorage();
   displayBooks();
   bookAdd();
+  showList.style.display = 'block';
+  showAdd.style.display = 'none';
+  showContact.style.display = 'none';
 };
