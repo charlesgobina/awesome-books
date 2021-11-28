@@ -15,9 +15,12 @@
   text-align: center;
 }
 
-header,
-main {
+header {
   padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 ul {
@@ -31,7 +34,7 @@ a {
 main {
   position: relative;
   min-height: 90vh;
-  padding-bottom: 100px;
+  padding: 0 5% 100px 5%;
 }
 
 button {
@@ -68,6 +71,18 @@ nav {
   border-radius: 94% 97% 97% 95%/1% 1% 1% 1%;
   transform: rotate(1deg);
   margin: 10px 20% 0 20%;
+  width: 60%;
+}
+
+#date {
+  border-width: 3px 3px 5px 5px;
+  border-radius: 94% 97% 97% 95%/1% 1% 1% 1%;
+  transform: rotate(1deg);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
 }
 
 .bx {
