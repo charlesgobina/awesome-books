@@ -4,6 +4,8 @@ Awesome Books is a website that allows users
 * View the books in the list
 * Remove the books from the list.
 
+![Awesome Books](assets/images/awesome.png)
+
 ## Low fidelity Wireframe
 ![screenshot](https://github.com/microverseinc/curriculum-javascript/blob/main/books/images/awesome_books_full_website.png)
 
@@ -13,7 +15,7 @@ Awesome Books is a website that allows users
 * JS
 
 ## Live Demo
-* [Demo](#)
+* [Demo link](https://charlesgobina.github.io/awesome-books/)
 
 ## Authors
 Charles Gobina :student: 
